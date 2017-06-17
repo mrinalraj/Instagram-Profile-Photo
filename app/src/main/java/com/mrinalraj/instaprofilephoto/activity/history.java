@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.mrinalraj.instaprofilephoto.R;
@@ -20,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class history extends AppCompatActivity {
-    TextView del;
+    Button del;
     DatabaseInteraction db;
     List<Username> UList= new ArrayList<Username>();
     RecyclerView history;
@@ -56,18 +57,18 @@ public class history extends AppCompatActivity {
             public void onLongClick(View view, int position) {
                 Username uname=UList.get(position);
                 db.delete(uname.getUsername());
+                prepareData();
             }
         }));
 
 
-        del= (TextView) findViewById(R.id.clear);
+        del= (Button) findViewById(R.id.clear);
 
         del.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 db.deleteAll();
                 prepareData();
-                historyAdapter.notifyDataSetChanged();
             }
         });
 

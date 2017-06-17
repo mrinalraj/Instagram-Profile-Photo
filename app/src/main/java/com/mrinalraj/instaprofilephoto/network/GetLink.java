@@ -8,6 +8,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.mrinalraj.instaprofilephoto.activity.result;
+import com.mrinalraj.instaprofilephoto.database.DatabaseInteraction;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -48,6 +49,7 @@ public class GetLink extends AsyncTask<String,Integer,JSONObject>{
                 Log.d("error status",err);
                 if (err.equals("0")){
                     link=reply.optString("profile_pic_url");
+
                 }
                 else {
 
@@ -69,6 +71,8 @@ public class GetLink extends AsyncTask<String,Integer,JSONObject>{
         pd.dismiss();
         Log.d("error status and link", err+"____"+link);
         if(link!=null) {
+            DatabaseInteraction db=new DatabaseInteraction(c,null);
+            db.add(username);
             String name = username;
             Intent intent = new Intent(c, result.class);
             intent.putExtra("username", name);

@@ -1,8 +1,14 @@
 package com.mrinalraj.instaprofilephoto.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -12,11 +18,20 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mrinalraj.instaprofilephoto.R;
+import com.mrinalraj.instaprofilephoto.adapter.HistoryAdapter;
+import com.mrinalraj.instaprofilephoto.adapter.Username;
 import com.mrinalraj.instaprofilephoto.database.DatabaseInteraction;
+import com.mrinalraj.instaprofilephoto.listeners.RecyclerTouchListener;
 import com.mrinalraj.instaprofilephoto.network.GetLink;
+import com.mrinalraj.instaprofilephoto.network.JSONCustom;
+import com.mrinalraj.instaprofilephoto.R;
 
+import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class search extends AppCompatActivity {
     private static final int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 0;
@@ -35,7 +50,7 @@ public class search extends AppCompatActivity {
         username_et= (EditText) findViewById(R.id.editText2);
         Button srch= (Button) findViewById(R.id.button);
 
-        db=new DatabaseInteraction(this,null);
+        //db=new DatabaseInteraction(this,null);
 
         srch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +60,7 @@ public class search extends AppCompatActivity {
                 }
                 else {
                     username=username_et.getText().toString().trim();
-                    db.add(username);
+                    //db.add(username);
                     new GetLink(search.this).execute(username);
                 }
             }

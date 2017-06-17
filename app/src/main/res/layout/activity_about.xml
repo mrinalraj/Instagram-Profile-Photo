@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -79,5 +82,43 @@
         android:layout_below="@+id/cd2"
         android:layout_marginTop="36dp" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv1"
+        android:layout_below="@+id/tv1"
+        android:layout_marginTop="12dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="44dp"
+        android:layout_alignStart="@+id/textView2"
+        android:text="If you have any suggestions for the app, or to report any error. \nClick the icon below." />
+
+    <ImageView
+        android:id="@+id/mail"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/mail"
+        android:layout_below="@+id/textView6"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/mail"
+        android:layout_marginTop="5dp"
+        android:text="Version 0.2 Beta" />
+
 
 </RelativeLayout>
+</ScrollView>

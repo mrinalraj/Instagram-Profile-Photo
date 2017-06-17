@@ -26,10 +26,23 @@ public class DatabaseInteraction extends SQLiteOpenHelper{
 
     public void add(String username){
         SQLiteDatabase mydb=this.getWritableDatabase();
-        String query= "INSERT INTO history (name) VALUES('"+username+"');";
-        mydb.execSQL(query);
-        Log.d("added","added to database");
-        mydb.close();
+        if (!doesHave(username)) {
+            String query = "INSERT INTO history (name) VALUES('" + username + "');";
+            mydb.execSQL(query);
+            Log.d("added", "added to database");
+        }
+        else {
+            Log.d("duplicate data", "username already present");
+        }
+    }
+    public boolean doesHave(String record){
+        String[] all=readAll();
+        for (int i=0; i<all.length;i++){
+            if (all[i].equals(record)){
+                return true;
+            }
+        }
+        return false;
     }
     public String[] readAll(){
         SQLiteDatabase mydb=this.getReadableDatabase();
@@ -46,21 +59,17 @@ public class DatabaseInteraction extends SQLiteOpenHelper{
                 i++;
             }
         }
-        mydb.close();
-
         return users;
     }
 
     public void deleteAll(){
         SQLiteDatabase mydb=this.getWritableDatabase();
         mydb.execSQL("DELETE FROM history;");
-        mydb.close();
     }
 
     public void delete(String username){
         SQLiteDatabase mydb=this.getWritableDatabase();
         mydb.delete("history", "name=?", new String[]{username});
-        mydb.close();
     }
 
 
