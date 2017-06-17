@@ -1,4 +1,4 @@
-package com.mrinalraj.instaprofilephoto;
+package com.mrinalraj.instaprofilephoto.activity;
 
 import android.Manifest;
 import android.app.ProgressDialog;
@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +20,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.mrinalraj.instaprofilephoto.R;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -39,7 +43,6 @@ public class result extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         getSupportActionBar().setElevation(0);
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         bundle=getIntent().getExtras();
         title=bundle.getString("username");
         if (title.equals("")){
@@ -70,6 +73,16 @@ public class result extends AppCompatActivity {
                         MY_PERMISSIONS_REQUEST_READ_CONTACTS);
             }
             saveImage(img);
+        }
+        if (item.getItemId()==R.id.share){
+            String bitmapPath = MediaStore.Images.Media.insertImage(getContentResolver(), img,"title", null);
+            Uri bitmapUri = Uri.parse(bitmapPath);
+
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("image/png");
+            intent.putExtra(Intent.EXTRA_STREAM, bitmapUri);
+            intent.putExtra(Intent.EXTRA_TEXT, "Sent using Instagram Profile Photo Viewer");
+            startActivity(Intent.createChooser(intent , "Share"));
         }
         //respond to menu item selection
         return false;

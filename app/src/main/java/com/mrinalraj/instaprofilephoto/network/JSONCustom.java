@@ -1,4 +1,4 @@
-package com.mrinalraj.instaprofilephoto;
+package com.mrinalraj.instaprofilephoto.network;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -5,23 +5,25 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".search">
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="adjustNothing">
+        <activity android:name=".activity.search">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".result" />
-        <activity android:name=".about"></activity>
+        <activity android:name=".activity.result" />
+        <activity android:name=".activity.about" />
+        <activity android:name=".activity.history"></activity>
     </application>
 
 </manifest>
