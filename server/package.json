@@ -1,0 +1,35 @@
+{
+  "name": "insta-scrapper",
+  "version": "1.0.0",
+  "description": "Instagram Profile Picture Scrapper",
+    "engines":{
+        "node": "8.1.x"
+    },
+  "scripts": {
+    "start": "node insta-scrapper.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishanjain28/insta-scrapper.git"
+  },
+  "keywords": [
+    "instagram",
+    "profile",
+    "picture",
+    "scrapper",
+    "web"
+  ],
+  "author": "Ishan Jain <github.com/ishanjain28>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ishanjain28/insta-scrapper/issues"
+  },
+  "homepage": "https://github.com/ishanjain28/insta-scrapper#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "cloudscraper": "^1.4.1",
+    "express": "^4.15.2",
+    "request": "^2.81.0"
+  }
+}
