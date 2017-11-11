@@ -1,9 +1,3 @@
 <resources>
-    <string name="app_name">Insta profile photo</string>
-    <string-array name="hist">
-        <item>mrinalraj</item>
-        <item>mrinalraj1</item>
-        <item>mrinalraj12</item>
-        <item>mrinalraj123</item>
-    </string-array>
+    <string name="app_name">Insta Face</string>
 </resources>

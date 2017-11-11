@@ -23,7 +23,7 @@
         </activity>
         <activity android:name=".activity.result" />
         <activity android:name=".activity.about" />
-        <activity android:name=".activity.history"></activity>
+        <activity android:name=".activity.history"/>
     </application>
 
 </manifest>

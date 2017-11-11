@@ -20,7 +20,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textAlignment="center"
-        android:hint="instagram username"
+        android:hint="instagram handle"
         />
 
     <Button
@@ -44,7 +44,8 @@
         android:layout_below="@+id/button"
         android:layout_marginStart="13dp"
         android:layout_marginTop="45dp"
-        android:text="This app shows the Instagram profile photo of anyone with a valid Instagram username.\nYou can view the profile picture of even the private profiles.\nAlso you can save and share directly from the app." />
+        android:lineSpacingExtra="4sp"
+        android:text="This app shows the Instagram profile photo of anyone with a valid Instagram username.\nYou can view the profile picture of even the private profiles.\nAlso you can save and share directly from the app. \n \n Paste a valid Instagram handle or go to a profile and copy the Instagram URl and come back here." />
 
 
 </RelativeLayout>

@@ -22,12 +22,12 @@ public class about extends AppCompatActivity {
         setTitle("About");
         TextView tv1=(TextView)findViewById(R.id.tv1);
         TextView tv2=(TextView)findViewById(R.id.textView2);
-        String styledText = "This project is on <font color='black'> Github</font>, feel free to check out<br><font color='blue'>https://github.com/mystiquemilo/Instagram-Profile-Photo</font>.";
+        String styledText = "This project is on <font color='black'> Github</font>, feel free to check out<br><font color='blue'>https://github.com/mrinalraj/Instagram-Profile-Photo</font>.";
         tv1.setText(Html.fromHtml(styledText), TextView.BufferType.SPANNABLE);
         tv1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/mystiquemilo/Instagram-Profile-Photo"));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/mrinalraj/Instagram-Profile-Photo"));
                 startActivity(browserIntent);
             }
         });
@@ -35,7 +35,7 @@ public class about extends AppCompatActivity {
         tv2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://icon8.com"));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://icons8.com"));
                 startActivity(browserIntent);
             }
         });
@@ -47,11 +47,9 @@ public class about extends AppCompatActivity {
             public void onClick(View view) {
                 Intent email = new Intent(Intent.ACTION_SEND);
                 email.putExtra(Intent.EXTRA_EMAIL, new String[]{"me@mrinalraj.com","ishanjain28@gmail.com"});
-                email.putExtra(Intent.EXTRA_SUBJECT, "The Insta profile photo app");
-
+                email.putExtra(Intent.EXTRA_SUBJECT, "Regarding the Insta Face app");
                 //need this to prompts email client only
                 email.setType("message/rfc822");
-
                 startActivity(Intent.createChooser(email, "Choose an Email client :"));
             }
         });

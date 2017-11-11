@@ -18,7 +18,10 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.mrinalraj.instaprofilephoto.R;
@@ -63,15 +66,6 @@ public class result extends AppCompatActivity {
     }
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId()==R.id.save){
-
-            if (ContextCompat.checkSelfPermission(this,
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                    != PackageManager.PERMISSION_GRANTED) {
-
-                ActivityCompat.requestPermissions(this,
-                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                        MY_PERMISSIONS_REQUEST_READ_CONTACTS);
-            }
             saveImage(img);
         }
         if (item.getItemId()==R.id.share){
@@ -81,10 +75,9 @@ public class result extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setType("image/png");
             intent.putExtra(Intent.EXTRA_STREAM, bitmapUri);
-            intent.putExtra(Intent.EXTRA_TEXT, "Sent using Instagram Profile Photo Viewer");
+            intent.putExtra(Intent.EXTRA_TEXT, "Sent using Insta Fsce app on Google Play Store");
             startActivity(Intent.createChooser(intent , "Share"));
         }
-        //respond to menu item selection
         return false;
 
     }
@@ -140,16 +133,24 @@ public class result extends AppCompatActivity {
 
     private class DownloadImage extends AsyncTask<String,Void,Bitmap>{
         ProgressDialog pd;
+        ProgressBar pb;
+        FrameLayout fl;
 
         @Override
         protected void onPreExecute() {
-            pd=new ProgressDialog(result.this);
             super.onPreExecute();
+
+            fl= (FrameLayout) findViewById(R.id.flpb);
+            pb= (ProgressBar) findViewById(R.id.pb);
+            pb.setIndeterminate(true);
+            /*
+            pd=new ProgressDialog(result.this);
             pd.setTitle("Loading Image");
             pd.setMessage("please wait");
             pd.setIndeterminate(true);
             pd.setCancelable(false);
             pd.show();
+            */
         }
 
         @Override
@@ -169,7 +170,8 @@ public class result extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Bitmap bitmap) {
-            pd.dismiss();
+            //pd.dismiss();
+            fl.setVisibility(View.INVISIBLE);
             ImageView imgView= (ImageView) findViewById(R.id.imageView);
             imgView.setImageBitmap(img);
             super.onPostExecute(bitmap);
