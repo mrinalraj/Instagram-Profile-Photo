@@ -1,5 +1,6 @@
 package com.mrinalraj.instaprofilephoto.network;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -22,7 +23,7 @@ public class GetLink extends AsyncTask<String,Integer,JSONObject>{
     ProgressDialog pd;
     Context c;
     JSONObject reply;
-    String link,err,username;
+    String link,err,username,finish;
 
     public GetLink(Context c){
         this.c=c;
@@ -41,6 +42,7 @@ public class GetLink extends AsyncTask<String,Integer,JSONObject>{
     protected JSONObject doInBackground(String... strings) {
         JSONCustom result= new JSONCustom();
         username=strings[0];
+        finish = strings[1];
         try {
             reply=result.getJSONObjectFromURL("http://insta-profile.herokuapp.com/"+username,"GET");
             if (reply!=null){
@@ -49,10 +51,9 @@ public class GetLink extends AsyncTask<String,Integer,JSONObject>{
                 Log.d("error status",err);
                 if (err.equals("0")){
                     link=reply.optString("profile_pic_url");
-
                 }
                 else {
-
+                    Toast.makeText(c, "Some error occured!", Toast.LENGTH_SHORT).show();
                 }
             }
             else{
@@ -78,8 +79,10 @@ public class GetLink extends AsyncTask<String,Integer,JSONObject>{
             intent.putExtra("username", name);
             intent.putExtra("link", link);
             link=null;
-
             c.startActivity(intent);
+            if (finish!= null && finish.equals("true")){
+                ((Activity)c).finish();
+            }
         }
         else {
             Toast.makeText(c, "Enter a valid Instagram username", Toast.LENGTH_LONG).show();
