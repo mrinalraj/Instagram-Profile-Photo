@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:padding="20dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="30sp" android:textColor="0x106000c" android:id="@id/title_about" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="About" />
+    <RelativeLayout app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_marginTop="15dp" app:layout_below="@id/title_about">
+        <android.support.v7.widget.CardView app:id="@id/cd1" app:layout_width="match_parent" app:layout_height="UNKNOWN_DATA_0x6401" app:layout_marginBottom="10dp">
+            <TextView app:textSize="25dp" app:textColor="0x106000e" app:id="@id/textView3" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginLeft="100dp" app:layout_marginTop="15dp" app:text="Mrinal Raj" />
+            <TextView app:textColor="@color/colorPrimary" app:id="@id/textView7" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginLeft="100dp" app:layout_marginTop="55dp" app:text="www.mrinalraj.com" />
+            <ImageView app:id="@id/imageView2" app:layout_width="UNKNOWN_DATA_0x4601" app:layout_height="UNKNOWN_DATA_0x4601" app:layout_margin="15dp" app:src="@drawable/mrinal" />
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView app:id="@id/cd2" app:layout_width="match_parent" app:layout_height="UNKNOWN_DATA_0x6401" app:layout_below="@id/cd1">
+            <ImageView app:layout_width="UNKNOWN_DATA_0x4601" app:layout_height="UNKNOWN_DATA_0x4601" app:layout_margin="15dp" app:src="@drawable/ishan" />
+            <TextView app:textSize="25dp" app:textColor="0x106000e" app:id="@id/textView4" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginLeft="100dp" app:layout_marginTop="15dp" app:text="Ishan Jain" />
+            <TextView app:textColor="@color/colorPrimary" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginLeft="100dp" app:layout_marginTop="55dp" app:text="www.ishanjain.me" />
+        </android.support.v7.widget.CardView>
+        <TextView app:id="@id/tv1" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginTop="25dp" app:layout_below="@id/cd2" app:layout_alignStart="@id/cd2" />
+        <TextView app:id="@id/textView2" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginTop="12dp" app:text="" app:layout_below="@id/tv1" app:layout_alignStart="@id/tv1" />
+        <TextView app:id="@id/textView6" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginTop="15dp" app:text="If you have any suggestions for the app, or to report any error. 
+Click the icon below." app:layout_below="@id/textView2" app:layout_alignStart="@id/textView2" />
+        <ImageView app:id="@id/mail" app:layout_width="UNKNOWN_DATA_0x2801" app:layout_height="UNKNOWN_DATA_0x2801" app:layout_marginTop="12dp" app:layout_below="@id/textView6" app:layout_alignParentStart="true" app:srcCompat="@drawable/mail" />
+        <TextView app:id="@id/version" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginTop="5dp" app:text="Version 3.2 (Release)" app:layout_below="@id/mail" app:layout_alignParentBottom="true" app:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

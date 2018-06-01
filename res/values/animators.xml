@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <animator name="bubble_down_click_animator">res/animator/bubble_down_click_animator.xml</animator>
+    <animator name="bubble_shown_animator">res/animator/bubble_shown_animator.xml</animator>
+    <animator name="bubble_trash_hide_animator">res/animator/bubble_trash_hide_animator.xml</animator>
+    <animator name="bubble_trash_hide_magnetism_animator">res/animator/bubble_trash_hide_magnetism_animator.xml</animator>
+    <animator name="bubble_trash_shown_animator">res/animator/bubble_trash_shown_animator.xml</animator>
+    <animator name="bubble_trash_shown_magnetism_animator">res/animator/bubble_trash_shown_magnetism_animator.xml</animator>
+    <animator name="bubble_up_click_animator">res/animator/bubble_up_click_animator.xml</animator>
+    <animator name="close_to_overflow">res/animator/close_to_overflow.xml</animator>
+    <animator name="design_appbar_state_list_animator">res/animator-v21/design_appbar_state_list_animator.xml</animator>
+    <animator name="overflow_to_close">res/animator/overflow_to_close.xml</animator>
+</resources>

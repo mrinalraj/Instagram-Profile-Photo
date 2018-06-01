@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.txusballesteros.bubbles.BubbleLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ImageView android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:id="@id/avatar" android:background="@drawable/bubble_bg" android:padding="10dp" android:layout_width="UNKNOWN_DATA_0x3c01" android:layout_height="UNKNOWN_DATA_0x3c01" android:src="@drawable/bubble_icon" android:scaleType="centerCrop" />
+</com.txusballesteros.bubbles.BubbleLayout>

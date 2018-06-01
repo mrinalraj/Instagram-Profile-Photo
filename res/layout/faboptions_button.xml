@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end" android:clickable="true" android:layout_width="UNKNOWN_DATA_0x7f08008d" android:layout_height="UNKNOWN_DATA_0x7f08008d" android:layout_margin="@dimen/faboptions_button_padding" android:foreground="?attr/selectableItemBackgroundBorderless" />

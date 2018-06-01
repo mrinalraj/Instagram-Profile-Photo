@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="@dimen/faboptions_vector_dimensions" android:width="@dimen/faboptions_vector_dimensions" android:viewportWidth="24.0" android:viewportHeight="24.0">
+    <path android:name="main" android:pathData="@string/faboptions_vector_close_path" android:strokeColor="#ffffff" android:strokeWidth="4.1" android:strokeLineCap="round" />
+</vector>

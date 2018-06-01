@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:background="#000" app:layout_width="match_parent" app:layout_height="match_parent">
+    <TextView app:textSize="17sp" app:textStyle="bold" app:textColor="#fff" app:id="@id/handle" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_margin="25dp" />
+    <com.jsibbold.zoomage.ZoomageView app:id="@id/imageView" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_centerHorizontal="true" app:layout_centerVertical="true" app:zoomage_zoomable="true" app:zoomage_translatable="true" app:zoomage_restrictBounds="false" app:zoomage_animateOnReset="true" app:zoomage_autoCenter="true" app:zoomage_minScale="0.6" app:zoomage_maxScale="8.0" app:zoomage_autoResetMode="0" />
+    <com.singh.daman.proprogressviews.DotsZoomProgress app:id="@id/progress" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_centerInParent="true" app:layout_centerHorizontal="true" app:inner_radius="30dp" app:inner_color="@color/colorPrimary" app:mid_radius="36dp" app:mid_color="@color/colorPrimary" app:outer_radius="40dp" app:outer_color="@color/colorPrimary" app:min_radius="10dp" app:zoom_speed="15.0" />
+    <com.joaquimley.faboptions.FabOptions app:id="@id/fab_options2" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_alignParentBottom="true" app:layout_centerHorizontal="true" app:button_menu="@menu/menu_fab2" />
+</RelativeLayout>

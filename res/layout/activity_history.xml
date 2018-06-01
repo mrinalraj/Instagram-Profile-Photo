@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:padding="20dp" app:layout_width="match_parent" app:layout_height="match_parent">
+    <TextView app:textSize="30sp" app:textColor="0x106000c" app:id="@id/title" app:layout_width="match_parent" app:layout_height="wrap_content" app:text="History" />
+    <TextView app:id="@id/ins" app:paddingTop="10dp" app:paddingBottom="10dp" app:layout_width="wrap_content" app:layout_height="wrap_content" app:text="Press and hold to delete one" app:layout_below="@id/title" />
+    <TextView app:textColor="@color/colorPrimary" app:id="@id/clearall" app:padding="10dp" app:layout_width="wrap_content" app:layout_height="wrap_content" app:text="Clear All" app:layout_alignBottom="@id/ins" app:layout_alignParentEnd="true" />
+    <android.support.v7.widget.RecyclerView app:id="@id/history_list" app:scrollbars="vertical" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_marginTop="15dp" app:layout_below="@id/clearall" />
+</RelativeLayout>

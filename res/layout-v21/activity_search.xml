@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:padding="16dp" app:layout_width="match_parent" app:layout_height="match_parent">
+    <ImageView app:id="@id/hamburger" app:paddingTop="10dp" app:paddingBottom="10dp" app:clickable="true" app:layout_width="UNKNOWN_DATA_0x2801" app:layout_height="UNKNOWN_DATA_0x2801" app:src="@drawable/nav_menu" app:paddingEnd="10dp" />
+    <TextView app:textSize="32sp" app:textStyle="UNKNOWN_DATA_0x0" app:textColor="#3d3d3d" app:id="@id/title_search" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginTop="10dp" app:layout_below="@id/hamburger" />
+    <LinearLayout app:orientation="horizontal" app:id="@id/search_bar" app:background="@drawable/search_background" app:layout_width="match_parent" app:layout_height="UNKNOWN_DATA_0x3701" app:layout_marginTop="5dp" app:layout_below="@id/title_search" app:elevation="2dp">
+        <EditText app:textSize="28sp" app:textColor="0x106000b" app:id="@id/search_text" app:background="0x106000d" app:layout_width="wrap_content" app:layout_height="match_parent" app:layout_weight="5.0" />
+        <Button app:id="@id/search_btn" app:background="@drawable/button_go" app:padding="10dp" app:layout_width="UNKNOWN_DATA_0x2301" app:layout_height="UNKNOWN_DATA_0x2301" />
+    </LinearLayout>
+    <TextView app:textStyle="italic" app:textColor="#000" app:id="@id/error" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginTop="10dp" app:layout_below="@id/search_bar" />
+    <TextView app:id="@id/description" app:layout_width="match_parent" app:layout_height="wrap_content" app:layout_marginTop="20dp" app:text="" app:layout_below="@id/error" app:lineSpacingExtra="4dp" />
+    <FrameLayout app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_alignParentBottom="true" app:layout_centerHorizontal="true">
+        <com.joaquimley.faboptions.FabOptions app:id="@id/fab_options" app:layout_width="wrap_content" app:layout_height="wrap_content" />
+    </FrameLayout>
+</RelativeLayout>

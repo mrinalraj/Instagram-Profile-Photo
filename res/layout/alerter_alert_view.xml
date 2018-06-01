@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res-auto" app:id="@c0974d/flClickShield" app:background="0x106000d" app:clickable="false" app:layout_width="match_parent" app:layout_height="match_parent"
+    <FrameLayout app:id="@c0974d/flAlertBackground" app:background="0x1060000" app:clickable="true" app:foreground="?attr/selectableItemBackground" style="@style/AlertStyle">
+        <RelativeLayout app:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill" app:id="@c0974d/rlContainer" app:background="0x0" app:padding="@c0973c/alerter_activity_horizontal_margin" app:clipChildren="false" app:clipToPadding="false" app:layout_width="wrap_content" app:layout_height="match_parent" app:layout_marginTop="@c0973c/alerter_padding_half">
+            <android.support.v7.widget.AppCompatImageView app:id="@c0974d/ivIcon" app:layout_width="UNKNOWN_DATA_0x7f080058" app:layout_height="UNKNOWN_DATA_0x7f080058" app:src="@drawable/alerter_ic_notifications" app:maxWidth="@c0973c/alerter_alert_icn_size" app:maxHeight="@c0973c/alerter_alert_icn_size" app:tint="@color/alert_default_icon_color" app:layout_alignParentLeft="true" app:layout_centerVertical="true" app:layout_alignParentStart="true" />
+            <LinearLayout app:orientation="vertical" app:id="@c0974d/llAlertTextContainer" app:background="0x0" app:clipChildren="false" app:clipToPadding="false" app:layout_width="wrap_content" app:layout_height="wrap_content" app:layout_marginLeft="@c0973c/alerter_activity_horizontal_margin" app:layout_marginRight="@c0973c/alerter_activity_horizontal_margin" app:layout_toRightOf="@c0974d/ivIcon" app:layout_centerVertical="true" app:layout_marginStart="@c0973c/alerter_activity_horizontal_margin" app:layout_marginEnd="@c0973c/alerter_activity_horizontal_margin" app:layout_toEndOf="@c0974d/ivIcon">
+                <TextView app:textAppearance="@style/AlertTextAppearance.Title" app:id="@c0974d/tvTitle" app:visibility="gone" app:layout_width="wrap_content" app:layout_height="wrap_content" />
+                <TextView app:textAppearance="@style/AlertTextAppearance.Text" app:id="@c0974d/tvText" app:paddingTop="@c0973c/alerter_padding_small" app:paddingBottom="@c0973c/alerter_padding_small" app:visibility="gone" app:layout_width="wrap_content" app:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+        <ProgressBar app:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill" app:id="@c0974d/pbProgress" app:visibility="gone" app:layout_width="match_parent" app:layout_height="UNKNOWN_DATA_0x7f080060" style="?unknown_attr_ref: 1010078" />
+    </FrameLayout>
+</FrameLayout>

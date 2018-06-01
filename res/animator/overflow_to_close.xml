@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:ordering="sequentially">
+    <objectAnimator android:valueFrom="@string/faboptions_vector_overflow_path" android:valueTo="@string/faboptions_vector_close_path" android:valueType="pathType" android:propertyName="pathData" />
+</set>

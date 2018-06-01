@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@c0974d/activity_mock" android:paddingLeft="@c0973c/alerter_activity_horizontal_margin" android:paddingTop="@c0973c/alerter_activity_vertical_margin" android:paddingRight="@c0973c/alerter_activity_horizontal_margin" android:paddingBottom="@c0973c/alerter_activity_vertical_margin" android:layout_width="match_parent" android:layout_height="match_parent" />

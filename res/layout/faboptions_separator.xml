@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View xmlns:android="http://schemas.android.com/apk/res/android" android:id="@c0981c/separator" android:layout_width="UNKNOWN_DATA_0x1" android:layout_height="UNKNOWN_DATA_0x1" android:layout_marginStart="@dimen/faboptions_separator_margin" android:layout_marginEnd="@dimen/faboptions_separator_margin" />
